@@ -1,0 +1,94 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 20px;
+    font-family: 'Outfit', sans-serif;
+    width: 60%;
+    gap: 20px;
+  }
+  
+  .testimonials h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  
+  .testimonials p
+  {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .testimonial {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 16px;
+    width: 220px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+  }
+
+.testimonial:hover
+{
+  transform: scale(1.03) !important;
+}
+
+  .user-info
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .user-info h3
+  {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .user-info p
+  {
+    margin-top: 0;
+    color: rgb(44, 44, 44) !important;
+    margin-bottom: 0;
+  }
+
+  
+  .user-icon
+  {
+    width: 3rem;
+    height: 3rem;
+    
+  }
+  
+  
+  .testimonial p {
+    font-size: 0.95rem;
+    color: gray;
+  }
+  
+  .rating-star
+  {
+    margin-top: 0;
+  }

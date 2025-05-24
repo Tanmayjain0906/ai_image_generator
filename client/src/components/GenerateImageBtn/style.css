@@ -1,0 +1,22 @@
+.generate-btn {
+  background-color: #111;
+  color: #fff;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.generate-btn:hover {
+  background-color: #333 !important;
+  transform: translateY(-2px) !important;
+}
+
+.generate-btn:active {
+  transform: scale(0.97) !important;
+  background-color: #000 !important;
+}

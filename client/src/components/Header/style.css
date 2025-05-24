@@ -1,0 +1,40 @@
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #0070f3;
+}
+
+.hero p {
+  font-size: 1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.image-gallery img {
+  width: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05) !important;
+}

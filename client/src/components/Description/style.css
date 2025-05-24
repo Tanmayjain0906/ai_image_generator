@@ -1,0 +1,49 @@
+.create-ai {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  
+  .top-content
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-content h2
+  {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  
+  .top-content p
+  {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 0;
+  }
+  
+  .create-ai img {
+    max-width: 300px;
+    border-radius: 16px;
+  }
+  
+  .ai-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    max-width: 60%;
+  }
+  
+  .ai-content h3 {
+    font-size: 1.3rem;
+  }
