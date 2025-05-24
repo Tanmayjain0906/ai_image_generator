@@ -11,6 +11,8 @@ const AppContextProvider = (props) => {
     const [isUserLoading, setIsUserLoading] = useState(true);
     const [credit, setCredit] = useState(null);
 
+    const backendUrl = "https://ai-image-generator-oglu.onrender.com";
+
     async function loadData() {
         setIsUserLoading(true);
         try {
@@ -46,7 +48,7 @@ const AppContextProvider = (props) => {
     }, [])
 
     return (
-        <AppContext.Provider value={{ user, setUser, isModalShow, setIsModalShow, credit, setCredit, isUserLoading, setIsUserLoading, loadData }}>
+        <AppContext.Provider value={{ user, setUser, isModalShow, setIsModalShow, credit, setCredit, isUserLoading, setIsUserLoading, loadData, backendUrl }}>
             {props.children}
         </AppContext.Provider>
     )

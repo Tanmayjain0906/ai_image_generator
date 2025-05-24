@@ -16,7 +16,7 @@ const AuthModal = ({ onClose }) => {
     const [isLoading, setIsLoading] = useState(false);
 
     const modalRef = useRef();
-    const { setCredit, setUser } = useContext(AppContext);
+    const { setCredit, setUser, backendUrl } = useContext(AppContext);
 
     async function handleForm(e) {
         e.preventDefault();
@@ -28,7 +28,7 @@ const AuthModal = ({ onClose }) => {
             }
             setIsLoading(true);
             try {
-                const { data } = await axios.post("/user/login", { email, password });
+                const { data } = await axios.post(`${backendUrl}/user/login`, { email, password });
                 console.log(data);
                 if (data.success) {
                     localStorage.setItem("token", data.token);
