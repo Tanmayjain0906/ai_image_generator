@@ -14,7 +14,7 @@ const ImagifyUI = () => {
   const [isImageGenerated, setIsImageGenerated] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const { credit, setCredit, user, isUserLoading } = useContext(AppContext);
+  const { credit, setCredit, user, isUserLoading, backendUrl } = useContext(AppContext);
   const navigate = useNavigate();
   const textareaRef = useRef(null);
 
@@ -44,7 +44,7 @@ const ImagifyUI = () => {
       }, 300);
 
       const { data } = await axios.post(
-        "/image/generate-image",
+        `${backendUrl}/image/generate-image`,
         { prompt: input },
         { headers: { token: localStorage.getItem("token") } }
       );

@@ -11,7 +11,7 @@ import Loader from "../../components/Loader";
 const PricingPage = () => {
      const[isLoading, setIsLoading] = useState(false);
 
-    const { user, isUserLoading, loadData } = useContext(AppContext);
+    const { user, isUserLoading, loadData, backendUrl } = useContext(AppContext);
 
     const navigate = useNavigate();
 
@@ -37,7 +37,7 @@ const PricingPage = () => {
             handler: async (response) => {
                 setIsLoading(true);
                 try {
-                    const {data} = await axios.post("/transaction/verify-razor", {razorpay_order_id: response.razorpay_order_id});
+                    const {data} = await axios.post(`${backendUrl}/transaction/verify-razor`, {razorpay_order_id: response.razorpay_order_id});
                     if(data.success)
                     {
                         navigate("/");
@@ -57,7 +57,7 @@ const PricingPage = () => {
       async function initiatePayment(planId)
       {
         try {
-            const {data} = await axios.post("/transaction/pay-razor", {planId}, {headers: {token: localStorage.getItem("token")}});
+            const {data} = await axios.post(`${backendUrl}/transaction/pay-razor`, {planId}, {headers: {token: localStorage.getItem("token")}});
             console.log(data);
             
             if(data.success)

@@ -56,7 +56,7 @@ const AuthModal = ({ onClose }) => {
             }
             setIsLoading(true);
             try {
-                const { data } = await axios.post("/user/registration", { name, email, password });
+                const { data } = await axios.post(`${backendUrl}/user/registration`, { name, email, password });
 
                 console.log(data);
                 if (data.success) {

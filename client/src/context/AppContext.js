@@ -16,7 +16,7 @@ const AppContextProvider = (props) => {
     async function loadData() {
         setIsUserLoading(true);
         try {
-            const { data } = await axios.get("/user/credit-balance", { headers: { token: localStorage.getItem("token") } });
+            const { data } = await axios.get(`${backendUrl}/user/credit-balance`, { headers: { token: localStorage.getItem("token") } });
 
             if (data.success) {
                 setCredit(data.data.creditBalance);

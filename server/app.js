@@ -11,7 +11,7 @@ require("./config/mongodb");
 
 
 app.use(cors({
-    origin: 'http://localhost:3000', 
+    origin: 'https://ai-image-generator-beta-eight.vercel.app', 
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     credentials: true 
 }));
